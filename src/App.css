@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  display: flex;
+  background: black;
+  color:#61dafb;
+  justify-content: center;
+}
+
+.navbar li{
+  list-style: none;
+  margin: 20px;
+  padding: 10px;
+}
+
+.navbar li:hover{
+  transform: scale(1.2);
+  font-weight: 600;
+  color: aqua;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.img1{
+  width: 48vh;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.center-img{
+  display: flex;
+  margin: auto;
+}
+
+
+.img-react{
+  width: 50vh;
+  display: flex;
+  margin: auto;
+} */
