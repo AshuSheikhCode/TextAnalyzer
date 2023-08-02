@@ -62,8 +62,8 @@ export default function TextFrom(props) {
             className="form-control"
             onChange={handleOnChange}
             style={{
-              background: props.mode === "dark" ? "#2b343d" : "white",
-              color: props.mode === "dark" ? "white" : "black",
+              background: props.mode === "dark" ? "#2b343d" : "white" && props.mode === "Greendark" ? "#013220" : "white" ,
+              color: props.mode === "dark" ? "white" : "black"
             }}
             id="myBox"
             value={text}
@@ -73,22 +73,22 @@ export default function TextFrom(props) {
         <button className="btn btn-primary" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-success mx-1" onClick={handleLoClick}>
+        <button className="btn btn-primary mx-1" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-info mx-0.7" onClick={handleCapitalizeClick}>
+        <button className="btn btn-primary mx-0.7" onClick={handleCapitalizeClick}>
           Capitalize Case
         </button>
-        <button className="btn btn-dark mx-1" onClick={handleExtraSpaces}>
+        <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
-        <button className="btn btn-danger mx-0.7" onClick={handleClearClick}>
+        <button className="btn btn-primary mx-0.7" onClick={handleClearClick}>
           Clear text
         </button>
-        <button className="btn btn-warning mx-1" onClick={handleDownloadClick}>
+        <button className="btn btn-primary mx-1" onClick={handleDownloadClick}>
           Download File
         </button>
-        <button className="btn btn-info mx-1" onClick={handleCopy}>
+        <button className="btn btn-primary mx-1" onClick={handleCopy}>
           Copy Text
         </button>
       </div>
@@ -97,7 +97,7 @@ export default function TextFrom(props) {
           Your text summary here
         </h2>
         <p >
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(/\s+/).length} words and {text.length} characters
         </p>
         <p >
           {0.008 * text.split(" ").length} Minutes read
